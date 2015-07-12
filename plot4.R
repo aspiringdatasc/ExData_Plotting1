@@ -44,7 +44,7 @@ selectdata <- within(selectdata, {datetime=as.POSIXct(paste(Date,Time))})
 ## Saving plot4 as PNG file with 480x480 pixels (standard)
 png("plot4.png")
 
-mypar <- par(mfcol=c(2,2), mar=c(3,4,3,1),oma=c(1,0,1,0))
+mypar <- par(mfcol=c(2,2), mar=c(4,4,3,1),oma=c(1,0,1,0))
 with(selectdata, {
         # Plot Set #1 - Plotting the Global Active Power vs. datetime
         plot(selectdata$datetime, selectdata[,3], pch=20, type="l", xlab="",
